@@ -14,7 +14,7 @@ export class Recipient {
 
   @ManyToOne(() => User, (user) => user.id, { onDelete: 'CASCADE' })
   @JoinColumn({ name: 'userId' })
-  user: User;
+  userId: String;
 
   @Column({ type: 'text' })
   name: string;

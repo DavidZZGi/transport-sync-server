@@ -15,13 +15,13 @@ export class TransportRequest {
 
   @ManyToOne(() => User, (user) => user.id, { onDelete: 'CASCADE' })
   @JoinColumn({ name: 'userId' })
-  user: User;
+  userId: String;
 
   @ManyToOne(() => Recipient, (recipient) => recipient.id, {
     onDelete: 'CASCADE',
   })
   @JoinColumn({ name: 'recipientId' })
-  recipient: Recipient;
+  recipientId: String;
 
   @Column({ type: 'int' })
   status: number;

@@ -11,7 +11,7 @@ export class RecipientsService {
   ) {}
 
   findAll(): Promise<Recipient[]> {
-    return this.recipientRepository.find({ relations: ['user'] });
+    return this.recipientRepository.find({ relations: ['userId'] });
   }
 
   findOne(id: number): Promise<Recipient | null> {

@@ -12,14 +12,14 @@ export class TransportRequestsService {
 
   findAll(): Promise<TransportRequest[]> {
     return this.transportRequestRepository.find({
-      relations: ['user', 'recipient'],
+      relations: ['userId', 'recipientId'],
     });
   }
 
   findOne(id: number): Promise<TransportRequest | null> {
     return this.transportRequestRepository.findOne({
       where: { id },
-      relations: ['user', 'recipient'],
+      relations: ['userId', 'recipientId'],
     });
   }
 
