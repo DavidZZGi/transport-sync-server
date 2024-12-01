@@ -6,6 +6,8 @@ import { TransportRequestsModule } from './transport-requests/transport_request.
 import { User } from './users/user.entity';
 import { Recipient } from './recipients/recipients.entity';
 import { TransportRequest } from './transport-requests/transport_request.entity';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
 
 @Module({
   imports: [
@@ -19,5 +21,7 @@ import { TransportRequest } from './transport-requests/transport_request.entity'
     RecipientsModule,
     TransportRequestsModule,
   ],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}

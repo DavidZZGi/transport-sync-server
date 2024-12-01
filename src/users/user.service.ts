@@ -11,7 +11,7 @@ export class UsersService {
   ) {}
 
   findAll(): Promise<User[]> {
-    return this.userRepository.find({ relations: ['recipients'] });
+    return this.userRepository.find();
   }
 
   create(data: User): Promise<User> {
